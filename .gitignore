@@ -2,7 +2,7 @@
 
 ### Linux ###
 *~
-
+.node_modules
 .idea
 
 packaged.yaml
