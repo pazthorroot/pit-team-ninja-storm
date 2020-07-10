@@ -1,5 +1,4 @@
 // tipos de datos
-
 /*
 ############
 Boolean
@@ -37,9 +36,6 @@ operadores
 suma =  +, +=
 resta = -, -=
 multiplicar = *
-
-
-
 
 */
 
