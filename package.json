@@ -2,6 +2,9 @@
   "name": "pit-team-ninja-storm",
   "version": "1.0.0",
   "description": "pit-team-ninja-storm",
+  "repository": "git@github.com:pazthorroot/pit-team-ninja-storm.git",
+  "license": "MIT",
+  "author": "sergioeabarcaf <sergio.abarca@patagonia-it.com>",
   "scripts": {
     "recursividad": "npx ts-node data_structures_algorithms/recursividad.ts",
     "backtracking": "npx ts-node data_structures_algorithms/backtracking.ts",
