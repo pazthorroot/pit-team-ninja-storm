@@ -25,12 +25,13 @@ throw lanzar una excepción
 
 */
 // condiciones && = and  || = or
+/*
 let carlos = ""
 if (carlos) {
   console.log("verdadero")
 }else if (condition) {
-
 }
+*/
 // operaciones ternarias
 // condición ? expresión1 : expresión2;
 // variable = expresión ? true_value : false_value;
