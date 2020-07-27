@@ -3,16 +3,14 @@
   "version": "1.0.0",
   "description": "pit-team-ninja-storm",
   "repository": "git@github.com:pazthorroot/pit-team-ninja-storm.git",
-  "license": "MIT",
-  "author": "sergioeabarcaf <sergio.abarca@patagonia-it.com>",
+  "license": "ISC",
+  "author": "Julio Villane",
   "scripts": {
     "recursividad": "npx ts-node data_structures_algorithms/recursividad.ts",
     "backtracking": "npx ts-node data_structures_algorithms/backtracking.ts",
     "divide_and_conquer": "npx ts-node data_structures_algorithms/divide_and_conquer.ts",
     "dynamic_programming": "npx ts-node data_structures_algorithms/dynamic_programming.ts"
   },
-  "author": "Julio Villane",
-  "license": "ISC",
   "dependencies": {
     "@types/node": "^14.0.10",
     "typescript": "^3.9.3"
