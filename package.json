@@ -6,10 +6,11 @@
   "license": "ISC",
   "author": "Julio Villane",
   "scripts": {
-    "recursividad": "npx ts-node data_structures_algorithms/recursividad.ts",
-    "backtracking": "npx ts-node data_structures_algorithms/backtracking.ts",
-    "divide_and_conquer": "npx ts-node data_structures_algorithms/divide_and_conquer.ts",
-    "dynamic_programming": "npx ts-node data_structures_algorithms/dynamic_programming.ts"
+    "recursivity": "npx ts-node data_structures_algorithms/algorithms/recursivity.ts",
+    "backtracking": "npx ts-node data_structures_algorithms/algorithms/backtracking.ts",
+    "divide_and_conquer": "npx ts-node data_structures_algorithms/algorithms/divide_and_conquer.ts",
+    "dynamic_programming": "npx ts-node data_structures_algorithms/algorithms/dynamic_programming.ts",
+    "data_structures": "npx ts-node data_structures_algorithms/data_structures/index.ts"
   },
   "dependencies": {
     "@types/node": "^14.0.10",
