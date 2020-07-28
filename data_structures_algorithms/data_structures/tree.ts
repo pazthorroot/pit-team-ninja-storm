@@ -11,7 +11,12 @@ export class Tree {
     if (this.root) {
       this.addNode(this.root, value);
     } else {
-      this.root = {value};
+      //this.root = {value};
+      this.root = {
+        value: value,
+        left: undefined,
+        right: undefined
+      };
     }
   }
 
@@ -29,5 +34,9 @@ export class Tree {
         node.right = {value};
       }
     }
+  }
+
+  delete(value: number) {
+    //TODO Tarea
   }
 }

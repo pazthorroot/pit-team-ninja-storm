@@ -1,3 +1,6 @@
+import {List} from "./list";
+import {Tree} from "./tree";
+import has = Reflect.has;
 // Data Structures
 // A data structure is a particular way of organizing data in a computer so that it can be used effectively.
 
@@ -5,16 +8,16 @@
 // An array is a collection of items stored at contiguous memory locations.
 // https://www.geeksforgeeks.org/array-data-structure/
 
-import {List} from "./list";
-import {Tree} from "./tree";
-
 const arreglo = new Array(10);
+//const arreglo2 = [];
 arreglo[0] = 0;
 arreglo[5] = 5;
-//console.log(arreglo);
-//
-//arreglo[15] = 15
-//console.log(arreglo);
+console.log(arreglo);
+
+arreglo[15] = 15
+console.log(arreglo);
+
+const arreglo3 = [0,2,3,5,7,13,19];
 
 // Hashing
 // Hashing is an important Data Structure which is designed to use a special function called the Hash function which is used to map a given value with a particular key for faster access of elements.
@@ -23,19 +26,24 @@ arreglo[5] = 5;
 const hash = {
   "1-9": {
     name: "John Doe",
-    born: "1967-09-24T09:05:12"
+    born: "1967-09-24T09:05:12",
+    child: {
+      simon: 'plantea la duda'
+    }
   },
   "2-7": {
     name: "Jane Doe",
     born: "1962-03-13T16:28:41"
   }
 }
-console.log(hash);
+console.log("p1", hash);
 
-//const john = hash["1-9"];
-//john.name = "Jason Bourne";
-//
-//console.log(hash);
+const john = JSON.parse(JSON.stringify(hash["1-9"]));
+john.name = "Jason Bourne";
+john.child.simon = "resuelve";
+
+console.log("p2", hash);
+console.log("p3", john);
 
 // Linked List
 // -----------
@@ -46,9 +54,9 @@ const list = new List();
 for (const value of [2, 3, 5, 7, 13, 17, 19, 23, 29, 37, 41, 43, 47, 49]) {
   list.add(value);
 }
-console.log(list.toString());
-list.remove(49);
-console.log(list.toString());
+console.log("p4", list.toString());
+list.remove(23);
+console.log("p5", list.toString());
 
 // Stack
 // -----
@@ -60,13 +68,17 @@ const stack = [];
 for(const value of [2, 3, 5, 7, 11, 13, 17]) {
   stack.push(value)
 }
-console.log(stack.pop());
-console.log(stack.pop());
+console.log("p6", stack);
+console.log("p7", stack.pop());
+console.log("p8", stack.pop());
+console.log("p9", stack);
+
 for(const value of [19, 23, 29, 31, 37, 41, 43, 47]) {
   stack.push(value)
 }
-console.log(stack.pop());
-console.log(stack.pop());
+console.log("p10", stack.pop());
+console.log("p11", stack.pop());
+console.log("p12", stack);
 
 // Queue
 // -----
@@ -78,13 +90,13 @@ const queue = [];
 for(const value of [2, 3, 5, 7, 11, 13, 17]) {
   queue.push(value)
 }
-console.log(queue.shift());
-console.log(queue.shift());
+console.log("p13", queue.shift());
+console.log("p14", queue.shift());
 for(const value of [19, 23, 29, 31, 37, 41, 43, 47]) {
   queue.push(value)
 }
-console.log(queue.shift());
-console.log(queue.shift());
+console.log("p15", queue.shift());
+console.log("p16", queue.shift());
 
 // Binary Tree
 // -----------

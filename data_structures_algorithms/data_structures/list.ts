@@ -11,7 +11,12 @@ export class List {
   }
 
   add(value: number) {
-    const node: Node = {value}
+    const node: Node = {
+      value: value,
+      next: undefined
+    }
+    //const node: Node = {value};
+
     if (this.root === undefined) {
       this.root = node;
     } else {
