@@ -23,7 +23,9 @@ node_modules/
 .env
 .env.*
 !.env.template
-
+bin/
+lib/
+pyvenv.cfg
 ### OSX ###
 *.DS_Store
 .AppleDouble
