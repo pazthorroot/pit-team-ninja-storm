@@ -29,4 +29,15 @@ para la instalación de este archivo es:
 
 ```pip install -r req.txt```
 
+## Django
+### instalación
+```pip install Django```
 
+### creación de un proyecto en Django
+```django-admin startproject <mysite>```
+
+### arrancar Django en modo desarrollo
+```python manage.py runserver```
+
+### crear una aplicación en Django
+```python manage.py startapp polls```
