@@ -9,7 +9,10 @@ packaged.yaml
 
 build
 dist
-
+.vscode
+__pycache___/
+__init__.py
+*.pyc
 node_modules/
 
 /libs/**/*.js

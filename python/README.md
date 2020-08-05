@@ -41,3 +41,12 @@ para la instalación de este archivo es:
 
 ### crear una aplicación en Django
 ```python manage.py startapp polls```
+
+### migrar aplicacione
+
+```python manage.py migrate```
+
+### crear usuario de en administración
+
+```python manage.py createsuperuser ```
+
