@@ -40,7 +40,7 @@ para la instalación de este archivo es:
 ```python manage.py runserver```
 
 ### crear una aplicación en Django
-```python manage.py startapp polls```
+```python manage.py startapp <nombre de la app>```
 
 ### migrar aplicacione
 

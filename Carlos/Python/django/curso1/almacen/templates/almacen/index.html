@@ -1,15 +1,8 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-  <script src="{% static 'js/bootstrap.js' %}"></script>
-</head>
-<body>
-  <h1>Este es una vista desde el template </h1>
-
-</body>
-</html>
+{% extends "almacen/base.html" %}
+{% block body %}
+<h1>Este es el bloque del body</h1>
+{{array}}
+{% for value in array %}
+<h3>{{value}}</h3>
+{% endfor %}
+{% endblock %}

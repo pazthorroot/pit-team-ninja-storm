@@ -6,4 +6,4 @@ def index(request):
   return HttpResponse("<h1>Hello Word</h1>")
 
 def indexHtml(request):
-  return render(request, 'almacen/index.html')
+  return render(request, 'almacen/index.html', {'array':[9,8,7,6,5,4,3]})
