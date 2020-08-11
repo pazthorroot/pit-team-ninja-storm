@@ -1,5 +1,22 @@
 {% extends "bodega/base.html" %}
 {% block bady %}
-<h2>este es mi body</h2>
-{{ bob }}
+<h2>Listado de Producto</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Marca</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for pro in producto %}
+    <tr>
+      <th scope="row">{{ pro.id_pro }}</th>
+      <td>{{ pro.nombre_pro }}</td>
+      <td>{{ pro.marca_pro.nombre_mar }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 {% endblock %}

@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from almacen.views import index, indexHtml
+from almacen.views import index, indexHtml, htmlId
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
     path('html/', indexHtml),
+    path('html/<int:id>', htmlId),
 ]

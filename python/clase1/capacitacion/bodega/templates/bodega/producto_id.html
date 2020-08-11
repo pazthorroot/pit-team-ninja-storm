@@ -1,0 +1,29 @@
+{% extends "bodega/base.html" %}
+{% block header %}
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item" aria-current="page">Home</li>
+      <li class="breadcrumb-item active" aria-current="page">Producto</li>
+    </ol>
+  </nav>
+  {% endblock %}
+{% block bady %}
+<h2>Producto</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Cantidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="col">{{producto.id_pro}}</th>
+      <th scope="col">{{producto.nombre_pro}}</th>
+      <th scope="col">{{producto.cantidad_pro}}</th>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}

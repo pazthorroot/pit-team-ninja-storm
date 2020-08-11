@@ -1,8 +1,24 @@
 {% extends "almacen/base.html" %}
 {% block body %}
 <h1>Este es el bloque del body</h1>
-{{array}}
-{% for value in array %}
-<h3>{{value}}</h3>
-{% endfor %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for value in producto %}
+  <tr>
+      <th scope="row">{{value.id_pro}}</th>
+      <td>{{value.nombre_pro}}</td>
+      <td>{{value.marca_pro.nombre_mar}}</td>
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+
 {% endblock %}
