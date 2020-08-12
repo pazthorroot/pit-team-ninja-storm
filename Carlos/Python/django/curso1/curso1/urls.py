@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from almacen.views import index, indexHtml, htmlId
+from almacen.views import index, indexHtml, htmlId, nuevo_pro
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
     path('html/', indexHtml),
     path('html/<int:id>', htmlId),
+    path('nuevo_pro/', nuevo_pro),
+    #path('save_pro/', save_pro),
 ]

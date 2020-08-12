@@ -1,0 +1,40 @@
+{% extends "almacen/base.html" %}
+{% block body %}
+<h1>
+  nuevo producto
+</h1>
+<form action='/nuevo_pro/' method='POST'>{% csrf_token %}
+<div class="row">
+  <div class="col-4">
+    <div class="form-group">
+    <label for="InputNombreProducto">Nombre producto</label>
+    <input type="text" name='nombre_pro' id='nombre_pro' >
+  </div>
+  <div class="form-group">
+    <label for="SelectMarca">Marca</label>
+    <select class="form-control" name="marca_pro" id="marca_pro">
+    {% for marca in marcas %}
+      <option value={{marca.id_mar}}>{{marca.nombre_mar}}</option>
+    {% endfor %}
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="InputCantidadProducto">Cantidad</label>
+    <input type="number" name='cantidad_pro' id='cantidad_pro'>
+  </div>
+  <div class="form-group">
+    <label for="InputCantidadProducto">Precio</label>
+    <input type="number" name='precio_pro' id='precio_pro'>
+  </div>
+
+  <div class="form-group">
+    <label for="InputCantidadProducto">En Stock</label>
+    <input type="checkbox" name='existencia_pro' id='existencia_pro'>
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar</button>
+  </div>
+</div>
+
+</form>
+
+{% endblock %}
