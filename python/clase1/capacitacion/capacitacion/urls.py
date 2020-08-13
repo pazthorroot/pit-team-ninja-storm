@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from bodega.views import index, html, producto_id
+from bodega.views import index, html, producto_id, nuevo_pro, save_pro
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', index, name="index"),
     path('html/', html),
     path('producto/<int:id>', producto_id),
+    path('nuevo_pro/', nuevo_pro),
+    path('save_pro/', save_pro),
 ]
