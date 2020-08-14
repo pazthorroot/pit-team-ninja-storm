@@ -15,6 +15,21 @@ def producto_id(request, id):
 
 def nuevo_pro(request):
   marcas = Marca.objects.all()
+  if request.method == 'POST':
+    marca_pro = request.POST['marca_pro']
+    nombre_pro = request.POST['nombre_pro']
+    cantidad_pro = request.POST['cantidad_pro']
+    precio_pro = request.POST['precio_pro']
+    estado_pro = request.POST['estado_pro']
+    marca = Marca.objects.get(id_mar=int(marca_pro))
+    if estado_pro == 'on':
+      estado_pro = True
+    elif estado_pro == 'off':
+      estado_pro = False
+    nuevo_producto = Producto(marca_pro=marca,nombre_pro=nombre_pro,cantidad_pro=cantidad_pro,precio_pro=precio_pro,estado_pro=estado_pro)
+    nuevo_producto.save()
+    return render(request, 'bodega/index.html',  {'producto':Producto.objects.all()})
+
   return render(request, 'bodega/nuevo_pro.html', {'marcas':marcas})
 
 def save_pro(request):
